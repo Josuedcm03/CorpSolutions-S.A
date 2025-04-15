@@ -1,9 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
     const formulario = document.getElementById("registroForm");
   
+    function mostrarError(campo, mensaje) {
+        campo.classList.add("error"); // agregar clase de error al campo
+        // crear un elemento div para mostrar el mensaje de error
+        const mensajeError = document.createElement("div");
+        mensajeError.classList.add("error-message");
+        mensajeError.textContent = mensaje;
+        //agregar el mensaje como hijo del campo
+        campo.parentElement.appendChild(mensajeError);
+      }
+
+      function limpiarErrores() {
+        //eliminar todos los mensajes de error existentes
+        document.querySelectorAll(".error-message").forEach((el) => el.remove());
+        //eliminar la clase de error de los campos
+        document.querySelectorAll(".error").forEach((el) => el.classList.remove("error"));
+      }
+
     formulario.addEventListener("submit", function (e) {
       e.preventDefault(); // evitar el envio del formulario por defecto
   
+      limpiarErrores();
+      
       // obtener los valores de los campos del formulario
       const cedula = document.getElementById("cedula");
       const nombres = document.getElementById("nombres");
@@ -16,7 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
       //recorrer los campos y verificar si están vacios
       [cedula, nombres, apellidos, departamento, motivo].forEach((campo) => {
         if (campo.value.trim() === "") {
-          valido = false;
+            mostrarError(campo, "Este campo es obligatorio");
+            valido = false;
         }
       });
 
@@ -30,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       //validar la cedula
       if (cedulaVal !== "" && !regexCedula.test(cedulaVal)) {
+        mostrarError(cedula, "Formato inválido. Ej: 999-999999-9999X");
         valido = false;
       }
 
@@ -37,4 +58,4 @@ document.addEventListener("DOMContentLoaded", () => {
   
       formulario.reset();
     });
-  });
+  }); 
