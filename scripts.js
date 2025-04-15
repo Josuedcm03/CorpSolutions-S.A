@@ -19,10 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
           valido = false;
         }
       });
+
+      //obtener el valor de la cedula sin espacios
+      const cedulaVal = cedula.value.trim();
+
+      //expresion regular para validar la cedula
+      const regexCedula = /^\d{3}-\d{6}-\d{4}[A-Z]$/;
+      //3 digitos, un guion, 6 digitos,
+      //un guion, 4 digitos y una letra mayuscula
   
+      //validar la cedula
+      if (cedulaVal !== "" && !regexCedula.test(cedulaVal)) {
+        valido = false;
+      }
+
       if (!valido) return; //si hay campos vacios no se envia el formulario
   
       formulario.reset();
     });
   });
-  
