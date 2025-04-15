@@ -1,64 +1,63 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+    }
+    
+    body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #6eaf79;
     color: #333;
     padding: 20px;
-  }
-  
-  main {
+    }
+    
+    main {
     max-width: 800px;
     margin: auto;
-  }
-  
-  h1, h2 {
+    }
+    
+    h1, h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #1f5c0b;
-  }
-  
-  
-  .formulario {
+    }
+    
+    
+    .formulario {
     background-color: #def4e2;
     padding: 25px;
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     margin-bottom: 30px;
-  }
-  
-  .campo {
+    }
+    
+    .campo {
     margin-bottom: 15px;
-  }
-  
-  label {
+    }
+    
+    label {
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
-  }
-  
-  input, select {
+    }
+    
+    input, select {
     width: 100%;
     padding: 10px;
     border: 2px solid #7b987b;
     border-radius: 5px;
     font-size: 16px;
     transition: all 0.3s;
-  }
-  
-  input:focus, select:focus {
+    }
+    
+    input:focus, select:focus {
     border-color: #04c9e7;
     outline: none;
     transform: scale(1.02);
-  }
-
- 
-input.error, select.error {
+    }
+    
+    
+    input.error, select.error {
     border-color: #e51d31;
     background-color: #fff0f0;
     }
@@ -68,8 +67,8 @@ input.error, select.error {
     font-size: 15px;
     margin-top: 4px;
     }
-
-  button {
+    
+    button {
     background-color: #275a28;
     color: white;
     padding: 12px 18px;
@@ -80,46 +79,48 @@ input.error, select.error {
     margin-top: 10px;
     width: 100%;
     transition: all 0.3s;
-  }
-
-  button:hover {
+    }
+    
+    button:hover {
     background-color: #53ae5b;
     transform: scale(1.04);
-  }
-  
-  .tabla-registros {
+    }
+    
+    .tabla-registros {
     background-color: #def4e2;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     overflow-x: auto;
-  }
-  
-  table {
+    }
+    
+    table {
     width: 100%;
     border-collapse: collapse;
     
-  }
-  
-  thead {
+    }
+    
+    thead {
     background-color: #275a28;
     color: white;
-  }
-  
-  th, td {
+    }
+    
+    th, td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: center;
-  }
-
-  /* para hacer que sea responsivo */
-@media (max-width: 600px) {
+    }
+    
+    /* para hacer que sea responsivo */
+    @media (max-width: 600px) {
     input, select, button {
-      font-size: 14px;
+    font-size: 14px;
     }
-  
+    
     th, td {
-      font-size: 14px;
+    font-size: 14px;
     }
-  }
-  
+    }
+    
+    
+    
