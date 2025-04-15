@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    //referencia al formulario
     const formulario = document.getElementById("registroForm");
-    //referencia a la tabla
-    const tablaBody = document.querySelector("#tablaVisitantes tbody"); 
-
   
     function mostrarError(campo, mensaje) {
         campo.classList.add("error"); // agregar clase de error al campo
@@ -60,18 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!valido) return; //si hay campos vacios no se envia el formulario
   
-      //crear una nueva fila en la tabla
-      const fila = document.createElement("tr");
-      //agregar la clase a la fila
-      fila.innerHTML = `
-        <td>${cedula.value}</td>
-        <td>${nombres.value}</td>
-        <td>${apellidos.value}</td>
-        <td>${departamento.value}</td>
-        <td>${motivo.value}</td>
-      `;
-      tablaBody.appendChild(fila); //agregar la fila al final de la tabla
-
       formulario.reset();
     });
   }); 
