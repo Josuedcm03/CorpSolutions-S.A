@@ -1,0 +1,89 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #6eaf79;
+    color: #333;
+    padding: 20px;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1f5c0b;
+  }
+  
+  
+  .formulario {
+    background-color: #def4e2;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+  }
+  
+  .campo {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #7b987b;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  button {
+    background-color: #275a28;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .tabla-registros {
+    background-color: #def4e2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #275a28;
+    color: white;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
